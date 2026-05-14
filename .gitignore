@@ -1,0 +1,37 @@
+# =========================
+# ENV / CONFIG (VERY IMPORTANT)
+# =========================
+.env
+config.php
+
+# =========================
+# DEPENDENCIES
+# =========================
+vendor/
+node_modules/
+
+# =========================
+# LOGS / CACHE
+# =========================
+*.log
+storage/
+cache/
+tmp/
+
+# =========================
+# SYSTEM FILES
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDE FILES
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# UPLOAD TEMP (OPTIONAL - depends on your thesis needs)
+# Uncomment if you DON'T want uploads in repo
+# =========================
+# uploads/
