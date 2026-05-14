@@ -1,0 +1,321 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+}
+
+
+
+
+#incomingOrders,
+#completedOrders {
+  display: flex;
+  flex-wrap: wrap;   /* allow wrapping to new row */
+  gap: 15px;         /* space between cards */
+  align-content: flex-start;
+}
+
+/* Fix 4 cards per row */
+.order {
+  flex: 1 1 calc(25% - 15px); /* 4 columns */
+  max-width: calc(25% - 15px);
+  min-width: 180px; /* keeps it from getting too small */
+  box-sizing: border-box;
+
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+
+
+/* Header for Dine-in / Take-out */
+.order-header {
+  color: #fff;
+  padding: 6px 10px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.dinein {
+  background: orange;
+}
+.takeout {
+  background: red;
+}
+
+/* Order body */
+.order-body {
+  padding: 8px 10px;
+  font-size: 0.85rem;
+}
+.order strong {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Items */
+.order ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.9rem;
+}
+
+.order li {
+  margin: 3px 0;
+}
+
+
+.purple-allergen-label {
+  color: rebeccapurple;
+  font-weight: bold;
+  margin-right: 3px;
+}
+.purple-allergen-value {
+  color: rebeccapurple;
+  font-style: italic;
+  margin-left: 0;
+  font-size: 1em;
+}
+.purple-note-label {
+  color: rebeccapurple;
+  font-style: italic;
+  font-weight: bold;
+  margin-right: 3px;
+}
+.purple-note-value {
+  color: rebeccapurple;
+  font-style: italic;
+  margin-left: 0;
+  font-size: 1em;
+}
+.menu-item-details {
+  margin-left: 25px;
+  margin-top: 2px;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+/* Status text */
+.status-text {
+  font-size: 0.95rem;
+  font-weight: bold;
+  display: block;
+  margin-top: 6px;
+}
+
+.status-pending { color: #e67e22; }
+.status-preparing { color: #3498db; }
+.status-completed, .status-served { color: #27ae60; }
+
+/* Buttons */
+.status-btns {
+  margin-top: 6px;
+  text-align: right;
+}
+
+.status-btns .btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.status-btns .btn:hover {
+  background: #218838;
+}
+
+.order-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #004d40;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
+}
+
+.status-btn {
+  flex: 1; /* Equal width for all buttons */
+  padding: 12px 0;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.status-btn:hover {
+  transform: scale(1.3);
+}
+
+/* COLOR OF FOOTER BUTTONS*/
+.pending {background: #71aea3;}
+.dinein { background: #ffbc7a; }    
+.takeout { background: #ff5768; }    
+.preparing { background: #55e8ff; }  
+.completed { background: #58ff74; }  
+.hold { background: #fdff89; }       
+
+#completedOrders {
+  display: none; /* hidden by default */
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+    }
+
+    .header {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .orders-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 20px;
+      justify-content: flex-start;
+    }
+
+    .order {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      width: 300px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .order-header {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 8px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .order-header.dinein {
+      background: #ffd694ff;
+    }
+
+    .order-header.takeout {
+      background: rgba(255, 90, 90, 1);
+    }
+
+    .order-body strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .order-body ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .spice-box {
+      margin-top: 6px;
+      color: #d9534f;
+      font-weight: bold;
+    }
+
+    .status-text {
+      margin-top: 8px;
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .status-pending {
+      color: #ff9800;
+    }
+    .status-preparing {
+      color: #2196f3;
+    }
+    .status-completed {
+      color: #4caf50;
+    }
+
+    .status-btns {
+      margin-top: 10px;
+    }
+
+    .status-btns .btn {
+      padding: 6px 10px;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background: #4caf50;
+      color: #fff;
+    }
+
+    .elapsed-time {
+      margin-top: 8px;
+      font-size: 13px;
+      color: #555;
+      font-style: italic;
+    }
+
+    footer.order-footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #222;
+      padding: 5px;
+      text-align: center;
+    }
+
+    footer .status-btn {
+      margin: 4px;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 0px;
+      font-size: 14px;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    .pending { background: #ff9800; }
+    .preparing { background: #2196f3; }
+    .completed { background: #4caf50; }
+    .dinein { background: #ffd694ff; }
+    .takeout { background: rgba(255, 90, 90, 1); }
+    .hold { background: #ffc107; }
+
+/* Fixed header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Push content down so it's not hidden behind header */
+.orders-container {
+  margin-top: 70px; /* adjust based on header height */
+}
+
+/* Active footer button */
+footer .status-btn.active {
+  outline: 3px solid #fff;
+  transform: scale(1.1);
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Thai Digital Kiosk",
+  "short_name": "Aroimak",
+  "start_url": "http://192.168.111.115/thai_digital/user/main.php",
+  "scope": "/thai_digital/user/",
+  "display": "standalone",
+  "orientation": "landscape",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

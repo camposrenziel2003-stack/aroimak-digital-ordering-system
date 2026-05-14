@@ -1,0 +1,201 @@
+/*MAIN.PHP CSS*/
+body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+    .half {
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      transition: transform 0.8s ease-in-out;
+    }
+    .top {
+      top: 0;
+      background-color: #e65100; /* Orange 800 */
+    }
+    .bottom {
+      bottom: 0;
+      background-color: #FFC107; /* Yellow */
+    }
+    /* Only the welcome screen logo */
+    .welcome-logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    .logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      text-align: center;
+    }
+    .logo img {
+      height: 220px;
+    }
+    .tap-text {
+      position: absolute;
+      top: 65%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 22px;
+      color: white;
+      font-weight: bold;
+    }
+    /* Animation classes */
+    .slide-up {
+      transform: translateY(-100%);
+    }
+    .slide-down {
+      transform: translateY(100%);
+    }
+/*FOOD PREF CSS*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, #FFD54F, #FFA726);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  color: white;
+  padding-top: 180px; /* push content below the locked logo */
+}
+
+.logo {
+  position: fixed;       /* lock in place */
+  top: 20px;             /* distance from top */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;         /* keep it above everything */
+  text-align: center;
+}
+
+.logo img {
+  width: 160px;
+  height: 160px;
+}
+
+h1 {
+  font-size: 55px;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+}
+
+h2 {
+  font-size: 35px;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .grid button {
+      padding: 20px;
+      font-size: 25px;
+      font-weight: bold;
+      border-radius: 10px;
+      border: 2px solid white;
+      background: white;
+      color: black;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .grid button.selected {
+      background: black;
+      color: white;
+      border: 2px solid black;
+    }
+    .grid button:disabled {
+      background: #ddd;
+      color: #999;
+      border-color: #ddd;
+      cursor: not-allowed;
+    }
+      .preference-btn {
+    border: 2px solid white;
+    border-radius: 14px;
+    padding: clamp(18px, 3vh, 28px);
+    font-size: clamp(16px, 2vw, 22px);
+    font-weight: bold;
+    cursor: pointer;
+    background: white;
+    color: black;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+  }
+    .preference-btn.selected {
+    background: black;
+    color: white;
+    border-color: black;
+  }
+    .actions button {
+      padding: 15px 30px;
+      font-size: 25px;
+      font-weight: bold;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .confirm-btn {
+    width: 70%;
+    max-width: 300px;
+    padding: clamp(16px, 2.5vw, 24px);
+    margin: 80px 0;
+    border: none;
+    border-radius: 14px;
+    background: black;
+    color: white;
+    font-size: clamp(20px, 2.5vw, 26px);
+    font-weight: bold;
+    cursor: pointer;
+    }
+    .confirm-btn:disabled {
+      background: #666;
+      cursor: not-allowed;
+    }
+    .skip-section {
+      margin-top: 10px;
+    }
+    .skip-section p {
+      font-size: 22px;
+      font-weight: bold;
+      color: #FF6F00;
+    }
+    .skip-btn {
+      background: #FFA726;
+      color: white;
+      border-radius: 20px;
+      padding: 10px 20px;
+    }
+     /* Tablet smaller than 800px -> 2 per row */
+  @media (max-width: 800px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Mobile -> 1 per row */
+  @media (max-width: 500px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
